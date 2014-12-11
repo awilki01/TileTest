@@ -16,14 +16,14 @@ public class MyGdxGame extends ApplicationAdapter {
     private OrthographicCamera cam;
     private SpriteBatch batch;
     private TiledMap tiledMap;
-    private OrthogonalTiledMapRenderer tiledMapRenderer;
+    private MyOrthogonalTiledMapRenderer tiledMapRenderer;
 	
 	@Override
 	public void create () {
 		batch = new SpriteBatch();
 
         tiledMap = new TmxMapLoader().load("map01.tmx");
-        tiledMapRenderer = new OrthogonalTiledMapRenderer(tiledMap, 1/32f);
+        tiledMapRenderer = new MyOrthogonalTiledMapRenderer(tiledMap, 1/32f);
 
         float w = Gdx.graphics.getWidth();
         float h = Gdx.graphics.getHeight();
